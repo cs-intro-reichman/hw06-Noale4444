@@ -80,7 +80,7 @@ public class Runigram {
 		int green = pixelColor.getGreen();
 		int blue = pixelColor.getBlue();
 
-		System.out.printf(" (d%, d%, d%) ",red, green, blue);
+		System.out.printf(" (%d, %d, %d) ",red, green, blue);
 			}
 			System.out.println();
 		}
