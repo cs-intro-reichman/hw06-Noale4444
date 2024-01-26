@@ -230,7 +230,7 @@ public class Runigram {
 		if( rows != target.length || cols != target[0].length )
 		target = scaled(target, cols, rows);
 		
-		for(int i = 0; i < n; i++) { 
+		for(int i = 0; i <= n; i++) { 
             double alpha = (n-i)/n ; 
 			  display(blend(source, target, alpha));
 			  StdDraw.pause(500); 
