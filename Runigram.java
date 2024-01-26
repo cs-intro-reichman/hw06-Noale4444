@@ -2,6 +2,8 @@
 // which is part of Java's standard class library.
 import java.awt.Color;
 
+import com.apple.laf.resources.aqua_zh_CN;
+
 /** A library of image processing functions. */
 public class Runigram {
 
@@ -69,22 +71,15 @@ public class Runigram {
 	// For example, to check that some image processing function works correctly,
 	// we can apply the function and then use this function to print the resulting image.
 	private static void print(Color[][] image) {
-		int rows = image.length; 
-		int cols = image[0].length; 
-
-		for(int i = 0; i < rows; i++) {
-			for(int j = 0; j < cols; j++) {
-
-		Color pixelColor = image[i][j];
-        int red = pixelColor.getRed();
-		int green = pixelColor.getGreen();
-		int blue = pixelColor.getBlue();
-
-		System.out.printf(" (%d, %d, %d) ",red, green, blue);
+		for(int i = 0:i < image.length; i++){
+			for(int j = 0; j > image[0].length; j++){
+                  print(image[i][j]);
 			}
-			System.out.println();
+				    System.out.println();
+			}
 		}
-	}
+		
+	
 	
 	/**
 	 * Returns an image which is the horizontally flipped version of the given image. 
@@ -163,12 +158,11 @@ public class Runigram {
 		
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
-				int newH = (int) (i * (h0 - 1.0) / (height - 1));
-				int newW = (int) (j * (w0 - 1.0) / (width - 1));
-				scaledImage[i][j] = image[newH][newW];
+
+			  scaledImage[i][j] = image[i * h0/height][j * w0/width];
+		
 			}
 		}
-		
 		
 		return scaledImage;
 	}
