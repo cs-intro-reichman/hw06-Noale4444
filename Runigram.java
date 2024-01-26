@@ -160,14 +160,16 @@ public class Runigram {
 		int h0 = image.length;
 		int w0 = image[0].length; 
 
-		double hScale = h0 / height; 
-		double wScale = w0 / width;
 		
-
 		for(int i = 0; i < height; i++){
 			for(int j = 0; j < width; j++){
 
-				scaledImage[i][j] = image[i * (h0 / height )][j * (w0 / width)];
+				int newH = (int) (i * (h0/height)); 
+				int newW = (int) (j * (w0/width));
+		
+			
+
+				scaledImage[i][j] = image[newH][newW];
 			}
 		}
 		
