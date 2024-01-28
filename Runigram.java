@@ -170,10 +170,7 @@ public class Runigram {
 		int vGreen = (int)(alpha * c1.getGreen() + (1 - alpha) * c2.getGreen());
 		int vBlue = (int)(alpha * c1.getBlue() + (1 - alpha) * c2.getBlue());
 
-		vRed = Math.min(250 , Math.max(0, vRed));
-		vGreen = Math.min(250 , Math.max(0, vGreen));
-		vBlue = Math.min(250 , Math.max(0, vBlue));
-
+		
 		Color newColor = new Color(vRed, vGreen, vBlue);
 
 		
@@ -194,7 +191,7 @@ public class Runigram {
 
 		for(int i = 0; i < rows; i++){
 			for(int j = 0; j < cols; j++) {
-				
+
 				blendImage[i][j] = blend(image1[i][j], image2[i][j], alpha);
 
 			}
